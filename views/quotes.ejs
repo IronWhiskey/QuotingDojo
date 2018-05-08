@@ -1,0 +1,26 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+
+</head>
+    <body>
+        <div id='wrapper'> 
+            
+            <h1>Here are some awsome quotes!</h1>
+
+           <% if (data) { %>
+                <% for(var i = 0; i < data.length; i++ ) { %>
+                    <% var p = data[i] %>
+                    <div class='quote'>
+                        <h1>"<%=p.quote%>"</h1>
+                        <h3 class='purple'><%=p.name%>,  <%=p.createdAt.toDateString()%></h3>
+                    </div>            
+                <% } %>
+            <% } %>
+
+
+        </div>
+    </body>
+</html>

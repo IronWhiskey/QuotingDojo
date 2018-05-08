@@ -1,0 +1,43 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+    <body>
+        <div id='wrapper'> 
+            
+                
+            <% JSON.stringify(messages) %>
+            <% if (messages.registration) { %>
+                <% for (var x of messages.registration) { %>
+                    <h3><%= x %></h3>
+                <% } %>
+            <% } %>
+
+
+            <h1>Welcome to Quoting Dojo</h1>
+            <form id='form' action='/addQuote' method='POST'>
+                <table>
+                    <tr>
+                        <td><label>Your Name:</label></td>
+                        <td><input type='text' name='name' id='name'></td>
+                    </tr>
+                    <tr>
+                        <td><label>Your quote:</label></td>
+                        <td><input type='text' name='quote'></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit"></td>
+                    </tr>
+                </table>
+            </form>
+            
+
+            <form action='/quotes' method='get'>
+                <button type='submit'>show quotes!</button>
+            </form>
+
+        </div>
+    </body>
+</html>

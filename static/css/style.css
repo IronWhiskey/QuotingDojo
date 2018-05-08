@@ -1,0 +1,22 @@
+/*CSS reset settings here*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#wrapper{
+    height: 1000px;
+    text-align: center;
+    /* vertical-align: middle; */
+}
+
+.quote{
+    width: 450px;
+    margin: 10px auto;
+    border: solid 1px red;
+    border-radius: 5px;
+}
+
+.purple{
+    color: purple;
+}
